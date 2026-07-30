@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guía: Subir a GitHub en 5 minutos</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+      line-height: 1.6;
+      color: #1a1a1a;
+      background: linear-gradient(135deg, #f4efe6 0%, #e8dfd0 100%);
+      padding: 2rem;
+    }
+    .container { max-width: 900px; margin: 0 auto; }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #b85c3a;
+    }
+    .subtitle {
+      font-size: 1.1rem;
+      color: #6b6b6b;
+      margin-bottom: 2rem;
+    }
+    .tabs {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    .tab-btn {
+      padding: 0.75rem 1.5rem;
+      border: 2px solid #b85c3a;
+      background: white;
+      color: #b85c3a;
+      cursor: pointer;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .tab-btn.active {
+      background: #b85c3a;
+      color: white;
+    }
+    .tab-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(184, 92, 58, 0.2);
+    }
+    .tab-content {
+      display: none;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(26, 26, 26, 0.1);
+    }
+    .tab-content.active {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #b85c3a;
+      border-bottom: 2px solid #e8dfd0;
+      padding-bottom: 0.5rem;
+    }
+    h3 {
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #4a5d3a;
+    }
+    .step {
+      background: #f4efe6;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      border-left: 4px solid #b85c3a;
+    }
+    .step-num {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      background: #b85c3a;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 32px;
+      font-weight: 700;
+      margin-right: 0.75rem;
+    }
+    code {
+      background: #1a1a1a;
+      color: #90EE90;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9rem;
+    }
+    pre {
+      background: #1a1a1a;
+      color: #90EE90;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 1rem 0;
+      font-family: 'Courier New', monospace;
+    }
+    .success {
+      background: #f0f8f0;
+      border-left: 4px solid #4a5d3a;
+      padding: 1rem;
+      border-radius: 6px;
+      margin: 1rem 0;
+    }
+    .warning {
+      background: #fff8f0;
+      border-left: 4px solid #b85c3a;
+      padding: 1rem;
+      border-radius: 6px;
+      margin: 1rem 0;
+    }
+    .link-box {
+      background: #e8dfd0;
+      padding: 1rem;
+      border-radius: 6px;
+      margin: 1rem 0;
+      text-align: center;
+    }
+    .link-box a {
+      color: #b85c3a;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+    .link-box a:hover {
+      text-decoration: underline;
+    }
+    .checklist {
+      list-style: none;
+      margin: 1rem 0;
+    }
+    .checklist li {
+      padding: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .checklist li:before {
+      content: "✓ ";
+      color: #4a5d3a;
+      font-weight: 700;
+      margin-right: 0.5rem;
+    }
+    button {
+      background: #b85c3a;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+    button:hover {
+      background: #4a5d3a;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(26, 26, 26, 0.15);
+    }
+    .footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e8dfd0;
+      color: #6b6b6b;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>🚀 Subir Rompelímites a GitHub</h1>
+  <p class="subtitle">Guía paso a paso — 5 minutos de tu tiempo</p>
+
+  <div class="tabs">
+    <button class="tab-btn active" onclick="showTab(0)">⚡ RÁPIDA</button>
+    <button class="tab-btn" onclick="showTab(1)">📝 MANUAL</button>
+    <button class="tab-btn" onclick="showTab(2)">🖥️ DESKTOP</button>
+    <button class="tab-btn" onclick="showTab(3)">❓ FAQ</button>
+  </div>
+
+  <!-- TAB 1: RÁPIDA -->
+  <div class="tab-content active">
+    <h2>⚡ Opción Rápida (Terminal)</h2>
+
+    <div class="step">
+      <span class="step-num">1</span>
+      <h3>Verificar Git</h3>
+      <p>Abre terminal/cmd y ejecuta:</p>
+      <pre>git --version</pre>
+      <p style="margin-top: 0.5rem;">Si no sale nada, descarga: <a href="https://git-scm.com" target="_blank" style="color: #b85c3a;">https://git-scm.com</a></p>
+    </div>
+
+    <div class="step">
+      <span class="step-num">2</span>
+      <h3>Ir a la carpeta del proyecto</h3>
+      <pre>cd rompelimites-bookstore</pre>
+    </div>
+
+    <div class="step">
+      <span class="step-num">3</span>
+      <h3>Ejecutar script de deploy</h3>
+      <p>Reemplaza <code>TU_USUARIO</code> con tu usuario GitHub:</p>
+      <pre>bash deploy.sh TU_USUARIO</pre>
+      <p style="margin-top: 0.5rem;"><strong>Ejemplo:</strong></p>
+      <pre style="margin-top: 0.5rem;">bash deploy.sh miguelmartosrompelimites</pre>
+    </div>
+
+    <div class="warning">
+      <strong>⚠️ Cuando pida contraseña:</strong><br>
+      No uses tu contraseña de GitHub. Usa un <strong>Personal Access Token</strong>:
+      <ol style="margin-top: 0.5rem;">
+        <li>Ve a: <a href="https://github.com/settings/tokens" target="_blank" style="color: #b85c3a;">github.com/settings/tokens</a></li>
+        <li>Click en "Generate new token (classic)"</li>
+        <li>Nombre: "GitHub Pages Deploy"</li>
+        <li>Selecciona ✅ <code>repo</code> y ✅ <code>workflow</code></li>
+        <li>Copia el token y pégalo en terminal (no verás caracteres)</li>
+      </ol>
+    </div>
+
+    <div class="step">
+      <span class="step-num">4</span>
+      <h3>Activar GitHub Pages</h3>
+      <ol>
+        <li>Ve a: <code>https://github.com/TU_USUARIO/rompelimites</code></li>
+        <li>Click en <strong>Settings</strong> (esquina superior derecha)</li>
+        <li>En menú izquierdo: <strong>Pages</strong></li>
+        <li><strong>Source:</strong> Selecciona <code>main</code></li>
+        <li><strong>Folder:</strong> Selecciona <code>/ (root)</code></li>
+        <li>Click en <strong>Save</strong></li>
+      </ol>
+    </div>
+
+    <div class="success">
+      ✅ <strong>¡Listo!</strong><br>
+      Tu web estará en vivo en:<br>
+      <code>https://TU_USUARIO.github.io/rompelimites</code><br>
+      <em>(Espera 2-3 minutos a que GitHub construya)</em>
+    </div>
+  </div>
+
+  <!-- TAB 2: MANUAL -->
+  <div class="tab-content">
+    <h2>📝 Opción Manual (GitHub Web)</h2>
+
+    <div class="step">
+      <span class="step-num">1</span>
+      <h3>Crear repositorio en GitHub</h3>
+      <ol>
+        <li>Ve a: <a href="https://github.com/new" target="_blank" style="color: #b85c3a;">github.com/new</a></li>
+        <li><strong>Repository name:</strong> <code>rompelimites</code></li>
+        <li><strong>Description:</strong> Tienda digital de libros</li>
+        <li>Selecciona: ⚪ <strong>Public</strong></li>
+        <li><strong>NO</strong> marques "Initialize with README"</li>
+        <li>Click en <strong>Create repository</strong></li>
+      </ol>
+    </div>
+
+    <div class="step">
+      <span class="step-num">2</span>
+      <h3>Subir archivos (Drag & Drop)</h3>
+      <ol>
+        <li>En la página del repo, verás un área gris</li>
+        <li><strong>Arrastra todos los archivos</strong> de <code>rompelimites-bookstore/</code></li>
+        <li>Commit message: <code>Tienda digital Rompelímites v1.0</code></li>
+        <li>Click en <strong>Commit changes</strong></li>
+      </ol>
+    </div>
+
+    <div class="step">
+      <span class="step-num">3</span>
+      <h3>Activar GitHub Pages</h3>
+      <ol>
+        <li>Click en <strong>Settings</strong></li>
+        <li>En menú: <strong>Pages</strong></li>
+        <li><strong>Source:</strong> <code>main</code></li>
+        <li><strong>Folder:</strong> <code>/ (root)</code></li>
+        <li>Click en <strong>Save</strong></li>
+      </ol>
+    </div>
+
+    <div class="success">
+      ✅ <strong>¡Hecho!</strong><br>
+      Verás: "Your site is published at..."<br>
+      Abre tu web en 2-3 minutos.
+    </div>
+  </div>
+
+  <!-- TAB 3: DESKTOP -->
+  <div class="tab-content">
+    <h2>🖥️ Opción GitHub Desktop (GUI)</h2>
+
+    <div class="step">
+      <span class="step-num">1</span>
+      <h3>Descargar GitHub Desktop</h3>
+      <p>Descarga desde: <a href="https://desktop.github.com" target="_blank" style="color: #b85c3a;">desktop.github.com</a></p>
+    </div>
+
+    <div class="step">
+      <span class="step-num">2</span>
+      <h3>Inicializar repositorio</h3>
+      <ol>
+        <li>Abre GitHub Desktop</li>
+        <li><strong>File</strong> → <strong>Add Local Repository</strong></li>
+        <li>Selecciona carpeta: <code>rompelimites-bookstore</code></li>
+        <li>Click en <strong>Create Repository</strong></li>
+      </ol>
+    </div>
+
+    <div class="step">
+      <span class="step-num">3</span>
+      <h3>Publicar a GitHub</h3>
+      <ol>
+        <li>Click en <strong>Publish repository</strong></li>
+        <li><strong>Name:</strong> <code>rompelimites</code></li>
+        <li><strong>Description:</strong> Tienda digital de libros</li>
+        <li>Selecciona: ⚪ <strong>Public</strong></li>
+        <li>Click en <strong>Publish Repository</strong></li>
+      </ol>
+    </div>
+
+    <div class="step">
+      <span class="step-num">4</span>
+      <h3>Activar Pages (web)</h3>
+      <ol>
+        <li>Ve a: <code>https://github.com/TU_USUARIO/rompelimites</code></li>
+        <li><strong>Settings</strong> → <strong>Pages</strong></li>
+        <li><strong>Source:</strong> <code>main</code></li>
+        <li><strong>Folder:</strong> <code>/ (root)</code></li>
+        <li>Click en <strong>Save</strong></li>
+      </ol>
+    </div>
+
+    <div class="success">
+      ✅ <strong>¡Completado!</strong><br>
+      Tu sitio estará en vivo en 2-3 minutos.
+    </div>
+  </div>
+
+  <!-- TAB 4: FAQ -->
+  <div class="tab-content">
+    <h2>❓ Preguntas Frecuentes</h2>
+
+    <h3>❌ "Error: Permission denied"</h3>
+    <p><strong>Solución:</strong> Usa Personal Access Token (no contraseña)</p>
+    <ol>
+      <li>Ve a: <a href="https://github.com/settings/tokens" target="_blank" style="color: #b85c3a;">github.com/settings/tokens</a></li>
+      <li>"Generate new token (classic)"</li>
+      <li>Selecciona ✅ <code>repo</code> y ✅ <code>workflow</code></li>
+      <li>Copia y pégalo en terminal cuando pida contraseña</li>
+    </ol>
+
+    <h3>❌ "Repository not found"</h3>
+    <p><strong>Verifica:</strong></p>
+    <ul class="checklist">
+      <li>Tu usuario GitHub sea correcto</li>
+      <li>Hayas creado el repo en GitHub</li>
+      <li>Estés en la carpeta <code>rompelimites-bookstore</code></li>
+    </ul>
+
+    <h3>❌ "Página en blanco o 404"</h3>
+    <p><strong>Solución:</strong></p>
+    <ol>
+      <li>Ve a: GitHub repo → <strong>Settings</strong> → <strong>Pages</strong></li>
+      <li>Verifica: <strong>Source</strong> = <code>main</code>, <strong>Folder</strong> = <code>/ (root)</code></li>
+      <li>Espera 5 minutos más</li>
+      <li>Limpia caché: <code>Ctrl+Shift+R</code> (Windows) o <code>Cmd+Shift+R</code> (Mac)</li>
+    </ol>
+
+    <h3>❌ "Los estilos no cargan"</h3>
+    <p><strong>Solución:</strong> Abre consola (F12) y revisa rutas. En GitHub Pages a veces necesitas <code>./assets/</code> en lugar de <code>/assets/</code></p>
+
+    <h3>✅ ¿Cuánto tiempo tarda?</h3>
+    <p>GitHub construye tu página en <strong>1-3 minutos</strong>. Si no ves cambios, espera más y limpia caché.</p>
+
+    <h3>✅ ¿Cómo editar después?</h3>
+    <p><strong>Opción 1:</strong> Edita en GitHub web (archivo → ✏️ → commit)</p>
+    <p><strong>Opción 2:</strong> Edita localmente y: <code>git add . && git commit -m "..." && git push</code></p>
+
+    <h3>✅ ¿Puedo usar dominio propio?</h3>
+    <p><strong>Sí.</strong> Compra dominio (GoDaddy, Namecheap, etc.) y en <strong>Settings → Pages</strong> agrega "Custom domain"</p>
+  </div>
+
+</div>
+
+<div class="footer">
+  <p>💡 <strong>Tip:</strong> Si algo falla, revisa la consola (F12) o usa GitHub Desktop para más control visual.</p>
+  <p style="margin-top: 1rem;">📧 Dudas: <strong>info@rompelimites.com</strong></p>
+  <p style="margin-top: 1rem; color: #999;">© 2026 Rompelímites</p>
+</div>
+
+<script>
+function showTab(index) {
+  const contents = document.querySelectorAll('.tab-content');
+  const buttons = document.querySelectorAll('.tab-btn');
+  
+  contents.forEach((c, i) => {
+    c.classList.toggle('active', i === index);
+  });
+  
+  buttons.forEach((b, i) => {
+    b.classList.toggle('active', i === index);
+  });
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║          🚀 ROMPELÍMITES — TIENDA DIGITAL DE LIBROS 🚀                    ║
+║                                                                            ║
+║                         ¡HOLA, BIENVENIDO!                                ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+
+📦 ¿QUÉ TIENES?
+═══════════════════════════════════════════════════════════════════════════
+
+✅ Tienda online PROFESIONAL (estilo Casa del Libro)
+✅ Catálogo de 12 libros de ejemplo
+✅ Sistema de carrito completamente funcional
+✅ Preview de 5 páginas por libro
+✅ Búsqueda en tiempo real
+✅ Página de contacto + FAQ
+✅ Diseño responsive (móvil + escritorio)
+✅ Listo para Hostinger, GitHub Pages, Netlify
+
+
+⚡ OPCIÓN RÁPIDA: SUBIR A GITHUB EN 5 MINUTOS
+═══════════════════════════════════════════════════════════════════════════
+
+Paso 1: Abre terminal/cmd
+Paso 2: Ve a la carpeta:
+        cd rompelimites-bookstore
+
+Paso 3: Ejecuta (reemplaza TU_USUARIO):
+        bash deploy.sh TU_USUARIO
+        
+        Ejemplo:
+        bash deploy.sh miguelmartosrompelimites
+
+Paso 4: Cuando pida contraseña, usa Personal Access Token:
+        - Ve a: github.com/settings/tokens
+        - Crea token con permisos: repo + workflow
+        - Pégalo en terminal
+
+Paso 5: Ve a GitHub → Settings → Pages
+        - Source: main
+        - Folder: / (root)
+        - Save
+
+✅ ¡LISTO! Tu web estará en:
+   https://TU_USUARIO.github.io/rompelimites
+   (Espera 2-3 minutos)
+
+
+📋 ARCHIVOS IMPORTANTES
+═══════════════════════════════════════════════════════════════════════════
+
+📖 INSTRUCCIONES-GITHUB.html ← ABRE ESTO EN NAVEGADOR
+   Guía visual interactiva con 3 opciones diferentes
+
+📝 DEPLOY.md
+   Guía detallada paso a paso (con todos los detalles)
+
+📄 README.md
+   Documentación técnica completa
+
+📂 Carpeta "rompelimites-bookstore/"
+   Tu proyecto completo listo para usar
+
+
+🎨 PERSONALIZAR TUS LIBROS
+═══════════════════════════════════════════════════════════════════════════
+
+1. Edita: assets/js/app.js
+   Línea ~15: Busca "const booksData = ["
+   Reemplaza títulos, precios, descripciones con los tuyos
+
+2. Sube portadas:
+   - Crea carpeta: assets/img/portadas/
+   - Sube tus imágenes (JPG o PNG)
+   - Actualiza referencias en app.js
+
+3. Cambia colores (opcional):
+   Edita: assets/css/style.css
+   Líneas 1-16: Variables CSS de colores
+
+
+🔄 TRES FORMAS DE SUBIR A GITHUB
+═══════════════════════════════════════════════════════════════════════════
+
+OPCIÓN 1 (RECOMENDADA): Terminal
+   bash deploy.sh TU_USUARIO
+
+OPCIÓN 2: Manual (sin terminal)
+   - Ve a github.com/new
+   - Crea repo "rompelimites"
+   - Arrastra archivos (drag & drop)
+   - Activa GitHub Pages en Settings
+
+OPCIÓN 3: GitHub Desktop (GUI)
+   - Descarga: desktop.github.com
+   - Add Local Repository
+   - Publish Repository
+   - Activa Pages en web
+
+
+✨ CARACTERÍSTICAS INCLUIDAS
+═══════════════════════════════════════════════════════════════════════════
+
+✓ Página de inicio con hero editorial + grid de libros
+✓ Modal con preview interactivo de 5 páginas
+✓ Búsqueda en tiempo real (filtra por título, autor, género)
+✓ Carrito persistente (guarda en localStorage)
+✓ Cálculo automático de IVA (21%)
+✓ Página de carrito con gestión de cantidades
+✓ Página de contacto con formulario
+✓ 6 FAQs sobre el servicio
+✓ Testimonios de clientes
+✓ Sección "Manifesto" con branding
+✓ Marquee animado con categorías
+✓ Footer completo
+✓ Animaciones suaves (sin jQuery)
+
+
+⚙️ TECNOLOGÍA
+═══════════════════════════════════════════════════════════════════════════
+
+- HTML5 (semántico, accesible)
+- CSS3 (sin frameworks, 100% custom)
+- JavaScript vanilla (sin librerías externas)
+- Diseño responsivo (mobile-first)
+- LocalStorage para persistencia
+- .htaccess para cache busting
+- Listo para Hostinger, GitHub Pages, Netlify
+
+
+💳 PAGOS
+═══════════════════════════════════════════════════════════════════════════
+
+AHORA: Sistema simulado (solo demostración)
+
+DESPUÉS: Integra uno de estos:
+- Stripe (recomendado)
+- PayPal
+- Redsys (España)
+- Gumroad (especializada en ebooks)
+
+
+❓ PREGUNTAS FRECUENTES
+═══════════════════════════════════════════════════════════════════════════
+
+P: ¿Necesito saber programación?
+R: No. Solo necesitas copiar/pegar datos en app.js
+
+P: ¿Cuánto cuesta?
+R: Gratis. GitHub Pages es gratuito.
+
+P: ¿Puedo usar mi dominio?
+R: Sí. Después de activar Pages, agrégalo en Settings.
+
+P: ¿Cómo agrego mis propias portadas?
+R: Copia imágenes a assets/img/portadas/ y actualiza app.js
+
+P: ¿Se puede integrar Stripe?
+R: Sí, pero necesitas backend (Node.js, Python, etc.)
+
+P: ¿Mi web será segura?
+R: Sí. GitHub usa HTTPS automáticamente.
+
+
+🚀 PRÓXIMOS PASOS
+═══════════════════════════════════════════════════════════════════════════
+
+1. ✅ Sube a GitHub (usa opción rápida arriba)
+2. ✅ Personaliza libros (edita app.js)
+3. ✅ Sube portadas reales (crea carpeta assets/img/portadas/)
+4. ✅ Cambia dominio (compra dominio + apunta a GitHub Pages)
+5. ✅ Integra pagos (Stripe o similar)
+
+
+📧 SOPORTE
+═══════════════════════════════════════════════════════════════════════════
+
+¿Dudas o problemas?
+Email: info@rompelimites.com
+
+Abre INSTRUCCIONES-GITHUB.html para guía visual completa.
+
+
+═════════════════════════════════════════════════════════════════════════════
+                    ¡DISFRUTA TU TIENDA DIGITAL! 🎉
+═════════════════════════════════════════════════════════════════════════════

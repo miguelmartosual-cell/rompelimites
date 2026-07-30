@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rompelímites — Libros de Desarrollo Personal y Espiritualidad</title>
+  <link rel="stylesheet" href="assets/css/style.css?v=20260730">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAV STICKY -->
+<nav class="nav-main">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">Rompelímites</a>
+    <div class="nav-menu">
+      <a href="index.html" class="nav-link">Catálogo</a>
+      <a href="contacto.html" class="nav-link">Contacto</a>
+      <a href="carrito.html" class="nav-cart">
+        <span class="cart-icon">🛒</span>
+        <span class="cart-count" id="cart-count">0</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-bg" style="background: linear-gradient(135deg, #f4efe6 0%, #e8dfd0 100%);"></div>
+  <div class="hero-content">
+    <p class="hero-kicker">Libros que transforman vidas</p>
+    <h1 class="hero-title">
+      Desarrollo personal<br>
+      <em>desde la fe.</em>
+    </h1>
+    <p class="hero-subtitle">Libros digitales de autoayuda, espiritualidad y crecimiento cristiano. Lee las primeras 5 páginas antes de comprar.</p>
+    <form class="hero-search" id="search-form">
+      <input type="text" id="search-input" placeholder="Buscar libro..." />
+      <button type="submit">⌕</button>
+    </form>
+  </div>
+</section>
+
+<!-- MANIFESTO -->
+<section class="manifesto">
+  <div class="manifesto-inner">
+    <div class="manifesto-num">01</div>
+    <div class="manifesto-text">
+      <p>En <strong>Rompelímites</strong> creemos que el crecimiento personal es un viaje que comienza con la decisión de transformar tu mente. Cada libro en esta tienda ha sido cuidadosamente seleccionado para ofrecerte herramientas prácticas, reflexiones profundas y guía espiritual.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GRID DE LIBROS -->
+<section class="catalog">
+  <div class="catalog-container">
+    <div class="catalog-header">
+      <h2>Nuestros Libros</h2>
+      <p>Explora nuestra colección de desarrollo personal y espiritualidad</p>
+    </div>
+    
+    <div class="books-grid" id="books-grid">
+      <!-- Libros se cargan dinámicamente -->
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE TICKER -->
+<div class="marquee">
+  <div class="marquee-content">
+    <span>✦ Desarrollo Personal ✦ Espiritualidad ✦ Crecimiento Cristiano ✦ Transformación ✦ Mindfulness ✦ Liderazgo ✦</span>
+    <span>✦ Desarrollo Personal ✦ Espiritualidad ✦ Crecimiento Cristiano ✦ Transformación ✦ Mindfulness ✦ Liderazgo ✦</span>
+  </div>
+</div>
+
+<!-- TESTIMONIOS -->
+<section class="testimonials">
+  <div class="testimonials-inner">
+    <h2>Lo que dicen nuestros lectores</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p class="testimonial-text">"Los libros de Rompelímites me ayudaron a replantearme mi vida y encontrar un propósito más profundo."</p>
+        <p class="testimonial-author">— María García, Madrid</p>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">"Contenido de gran valor. Las enseñanzas son prácticas y transformadoras. Recomendado al 100%."</p>
+        <p class="testimonial-author">— Carlos López, Barcelona</p>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">"La combinación de desarrollo personal con fe cristiana es única. Un descubrimiento valioso."</p>
+        <p class="testimonial-author">— Ana Rodríguez, Valencia</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="cta-content">
+    <h2>Comienza tu transformación hoy</h2>
+    <p>Acceso inmediato a todos nuestros libros digitales. Lecturas previas sin compromiso.</p>
+    <a href="#books-grid" class="btn btn-primary">Explorar catálogo</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h4>Rompelímites</h4>
+      <p>Libros de transformación personal y crecimiento espiritual.</p>
+    </div>
+    <div class="footer-section">
+      <h4>Enlaces</h4>
+      <ul>
+        <li><a href="index.html">Catálogo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="#" class="policy-link">Política de privacidad</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Conecta</h4>
+      <p>Email: info@rompelimites.com</p>
+    </div>
+  </div>
+  <div class="footer-credits">
+    <p>© 2026 Rompelímites. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<!-- MODAL DE LIBRO (para preview) -->
+<div class="modal" id="book-modal">
+  <div class="modal-content">
+    <button class="modal-close" id="modal-close">✕</button>
+    <div class="modal-inner">
+      <div class="modal-preview">
+        <div class="preview-pages" id="preview-pages"></div>
+      </div>
+      <div class="modal-info">
+        <h2 id="modal-title"></h2>
+        <p id="modal-author"></p>
+        <p class="modal-description" id="modal-description"></p>
+        <div class="modal-price">
+          <span class="price" id="modal-price">€0.00</span>
+        </div>
+        <button class="btn btn-primary" id="add-to-cart-btn">Comprar ahora</button>
+        <p class="modal-note">📖 Lee las primeras 5 páginas antes de comprar</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/app.js?v=20260730"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+# Caché control para Hostinger y servidores Apache
+# Evita que navegadores cacheen archivos viejos
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 hour"
+  
+  # No cachear HTML ni JS/CSS (para que siempre estén frescos)
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType application/javascript "access plus 0 seconds"
+  ExpiresByType text/css "access plus 0 seconds"
+  
+  # Cachear imágenes y fuentes por más tiempo
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/gif "access plus 30 days"
+  ExpiresByType font/woff2 "access plus 30 days"
+</IfModule>
+
+<IfModule mod_headers.c>
+  # No cachear HTML
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "Wed, 21 Oct 2015 07:28:00 GMT"
+  </FilesMatch>
+  
+  # Versioned assets (js/css con ?v=) cachean
+  <FilesMatch "\.(js|css)$">
+    Header set Cache-Control "max-age=31536000, public"
+  </FilesMatch>
+  
+  # Imágenes cachean
+  <FilesMatch "\.(jpg|jpeg|png|gif|webp|svg|woff|woff2|ttf)$">
+    Header set Cache-Control "max-age=31536000, public"
+  </FilesMatch>
+</IfModule>
+
+# Habilitar GZIP
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
+
+# Reescritura de URLs (si es necesario)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  
+  # Redirigir a index.html si el archivo no existe
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ index.html [L]
+</IfModule>

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto — Rompelímites</title>
+  <link rel="stylesheet" href="assets/css/style.css?v=20260730">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAV STICKY -->
+<nav class="nav-main">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">Rompelímites</a>
+    <div class="nav-menu">
+      <a href="index.html" class="nav-link">Catálogo</a>
+      <a href="contacto.html" class="nav-link">Contacto</a>
+      <a href="carrito.html" class="nav-cart">
+        <span class="cart-icon">🛒</span>
+        <span class="cart-count" id="cart-count">0</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<section class="contact-hero">
+  <div class="contact-hero-content">
+    <h1>Ponte en Contacto</h1>
+    <p>¿Preguntas sobre nuestros libros? ¿Sugerencias? Nos encantaría escucharte.</p>
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="contact-container">
+    <div class="contact-form-wrapper">
+      <h2>Envíanos un Mensaje</h2>
+      <form class="contact-form" id="contact-form">
+        <div class="form-group">
+          <label for="name">Nombre *</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Asunto *</label>
+          <input type="text" id="subject" name="subject" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Mensaje *</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+        <p class="form-note" id="form-status"></p>
+      </form>
+    </div>
+
+    <div class="contact-info-wrapper">
+      <h2>Información de Contacto</h2>
+      
+      <div class="info-block">
+        <h3>📧 Email</h3>
+        <p><a href="mailto:info@rompelimites.com">info@rompelimites.com</a></p>
+      </div>
+
+      <div class="info-block">
+        <h3>📍 Ubicación</h3>
+        <p>Almería, Andalusia<br>España</p>
+      </div>
+
+      <div class="info-block">
+        <h3>⏰ Disponibilidad</h3>
+        <p>Lunes a Viernes<br>9:00 AM - 6:00 PM (CET)</p>
+      </div>
+
+      <div class="info-block">
+        <h3>📚 Acerca de Rompelímites</h3>
+        <p>Somos una editorial digital especializada en libros de desarrollo personal, espiritualidad y crecimiento cristiano. Nuestra misión es ayudarte a transformar tu vida a través de contenido de calidad.</p>
+      </div>
+
+      <div class="social-links">
+        <a href="#" class="social-link">Instagram</a>
+        <a href="#" class="social-link">Facebook</a>
+        <a href="#" class="social-link">YouTube</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="faq-container">
+    <h2>Preguntas Frecuentes</h2>
+    
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3>¿Cómo funciona el preview de libros?</h3>
+        <p>Puedes leer las primeras 5 páginas de cualquier libro antes de comprarlo. Haz clic en "Ver preview" en la tarjeta del libro para acceder a la visualización completa.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>¿Qué formatos digitales ofrecen?</h3>
+        <p>Nuestros libros están disponibles en EPUB, PDF y MOBI. Podrás descargarlos inmediatamente después de completar tu compra.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>¿Hay devoluciones?</h3>
+        <p>Debido a la naturaleza digital de nuestros productos, no ofrecemos devoluciones. Sin embargo, ofrecemos previsualizaciones completas para que estés seguro antes de comprar.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>¿Cuál es el tiempo de entrega?</h3>
+        <p>Los libros digitales se entregan instantáneamente después del pago. Recibirás un email con tu enlace de descarga.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>¿Aceptan todas las tarjetas?</h3>
+        <p>Aceptamos todas las tarjetas de crédito y débito principales: Visa, Mastercard, American Express. Próximamente también PayPal.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>¿Puedo compartir el libro con otros?</h3>
+        <p>Nuestros libros están bajo licencia de uso personal. No pueden ser compartidos o redistribuidos sin autorización expresa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h4>Rompelímites</h4>
+      <p>Libros de transformación personal y crecimiento espiritual.</p>
+    </div>
+    <div class="footer-section">
+      <h4>Enlaces</h4>
+      <ul>
+        <li><a href="index.html">Catálogo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="#" class="policy-link">Política de privacidad</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Contacta</h4>
+      <p>Email: info@rompelimites.com</p>
+    </div>
+  </div>
+  <div class="footer-credits">
+    <p>© 2026 Rompelímites. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<style>
+.contact-hero {
+  background: linear-gradient(135deg, #f4efe6 0%, #e8dfd0 100%);
+  padding: 120px 2rem 80px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.contact-hero-content h1 {
+  font-family: 'Fraunces', serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.contact-hero-content p {
+  font-size: 1.2rem;
+  color: #6b6b6b;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-section {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 2rem;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+}
+
+.contact-form-wrapper h2,
+.contact-info-wrapper h2 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(26, 26, 26, 0.08);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e8dfd0;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #b85c3a;
+  box-shadow: 0 0 0 3px rgba(184, 92, 58, 0.1);
+}
+
+.form-note {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #4a5d3a;
+  font-weight: 600;
+  display: none;
+}
+
+.form-note.show {
+  display: block;
+}
+
+.contact-form .btn {
+  width: 100%;
+}
+
+.contact-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.info-block {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(26, 26, 26, 0.08);
+}
+
+.info-block h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  color: #b85c3a;
+}
+
+.info-block p {
+  color: #6b6b6b;
+  line-height: 1.6;
+}
+
+.info-block a {
+  color: #b85c3a;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.info-block a:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  background: #f4efe6;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #b85c3a;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: #b85c3a;
+  color: white;
+}
+
+.faq-section {
+  background: #f4efe6;
+  padding: 80px 2rem;
+  margin-top: 80px;
+}
+
+.faq-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.faq-container h2 {
+  font-family: 'Fraunces', serif;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.faq-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(26, 26, 26, 0.08);
+}
+
+.faq-item h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #b85c3a;
+}
+
+.faq-item p {
+  color: #6b6b6b;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<script>
+const cartCountEl = document.getElementById('cart-count');
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+
+let cart = JSON.parse(localStorage.getItem('rompelimites-cart')) || [];
+
+function updateCartCount() {
+  cartCountEl.textContent = cart.reduce((sum, item) => sum + item.qty, 0);
+}
+
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const subject = document.getElementById('subject').value;
+  const message = document.getElementById('message').value;
+
+  // En producción, esto se enviaría a un servidor
+  console.log('Mensaje enviado:', { name, email, subject, message });
+  
+  formStatus.textContent = '✓ Tu mensaje ha sido enviado. Te responderemos pronto.';
+  formStatus.classList.add('show');
+  contactForm.reset();
+
+  setTimeout(() => {
+    formStatus.classList.remove('show');
+  }, 4000);
+});
+
+updateCartCount();
+</script>
+
+</body>
+</html>
