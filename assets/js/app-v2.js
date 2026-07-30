@@ -422,3 +422,55 @@ style.textContent = `
 document.head.appendChild(style);
 
 console.log('✓ App v2 cargada correctamente');
+
+// Autoplay para carrusel de testimonios
+function initTestimonialsAutoplay() {
+  const carousel = document.getElementById('testimonials-carousel');
+  if (!carousel) return;
+
+  // Clonar todos los testimonios para crear un efecto infinito
+  const testimonials = carousel.querySelectorAll('.testimonial-card-v2');
+  testimonials.forEach(testimonial => {
+    const clone = testimonial.cloneNode(true);
+    carousel.appendChild(clone);
+  });
+
+  let scrollAmount = 0;
+  const itemWidth = 332; // 300px + gap (2rem = 32px)
+
+  const scrollInterval = setInterval(() => {
+    scrollAmount += itemWidth;
+    const maxScroll = carousel.scrollWidth / 2;
+    
+    if (scrollAmount > maxScroll - itemWidth) {
+      scrollAmount = 0;
+    }
+    
+    carousel.scrollLeft = scrollAmount;
+  }, 2000); // Avanzar cada 2 segundos
+
+  // Pausar al hover
+  carousel.addEventListener('mouseenter', () => {
+    clearInterval(scrollInterval);
+  });
+
+  carousel.addEventListener('mouseleave', () => {
+    scrollInterval = setInterval(() => {
+      scrollAmount += itemWidth;
+      const maxScroll = carousel.scrollWidth / 2;
+      
+      if (scrollAmount > maxScroll - itemWidth) {
+        scrollAmount = 0;
+      }
+      
+      carousel.scrollLeft = scrollAmount;
+    }, 2000);
+  });
+}
+
+// Inicializar cuando el DOM esté listo
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initTestimonialsAutoplay);
+} else {
+  initTestimonialsAutoplay();
+}
