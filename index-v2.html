@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rompelímites — Libros de Transformación Personal y Espiritual</title>
+  <link rel="stylesheet" href="assets/css/style-v2.css?v=20260730">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAV STICKY -->
+<nav class="nav-main">
+  <div class="nav-container">
+    <a href="index-v2.html" class="nav-logo">Rompelímites</a>
+    <div class="nav-menu">
+      <a href="#catalogo" class="nav-link">Catálogo</a>
+      <a href="#autor" class="nav-link">El Autor</a>
+      <a href="#blog" class="nav-link">Blog</a>
+      <a href="contacto.html" class="nav-link">Contacto</a>
+      <a href="carrito.html" class="nav-cart">
+        <span class="cart-icon">🛒</span>
+        <span class="cart-count" id="cart-count">0</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO SECTION ===== -->
+<section class="hero-v2">
+  <div class="hero-background">
+    <div class="hero-pattern"></div>
+    <div class="hero-gradient"></div>
+  </div>
+  
+  <div class="hero-content-v2">
+    <div class="hero-text">
+      <p class="hero-kicker">Transforma tu vida desde hoy</p>
+      <h1 class="hero-title-main">
+        <span class="title-word">Crecimiento</span>
+        <span class="title-word">personal</span>
+        <span class="title-word accent">desde la fe</span>
+      </h1>
+      <p class="hero-subtitle">Libros digitales de autoayuda, espiritualidad y desarrollo cristiano. Acceso inmediato, sin suscripción.</p>
+      
+      <div class="hero-cta-group">
+        <a href="#catalogo" class="cta-primary">Explorar catálogo</a>
+        <a href="#autor" class="cta-secondary">Conoce al autor</a>
+      </div>
+      
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">12+</span>
+          <span class="stat-label">Libros publicados</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">50k+</span>
+          <span class="stat-label">Lectores activos</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">4.8★</span>
+          <span class="stat-label">Valoración promedio</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="hero-visual">
+      <div class="featured-book-3d">
+        <div class="book-stack">
+          <div class="book book-1"></div>
+          <div class="book book-2"></div>
+          <div class="book book-3"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="scroll-indicator">
+    <span>Desplázate para explorar</span>
+    <div class="scroll-arrow">↓</div>
+  </div>
+</section>
+
+<!-- ===== ABOUT AUTHOR SECTION ===== -->
+<section class="author-section" id="autor">
+  <div class="author-container">
+    <div class="author-image">
+      <div class="author-avatar">
+        <span class="avatar-initial">R</span>
+      </div>
+      <div class="author-badge">Autor Rompelímites</div>
+    </div>
+    
+    <div class="author-content">
+      <h2>Sobre el Autor</h2>
+      
+      <p class="author-bio">
+        Soy <strong>Miguel Martos</strong>, conocido como <strong>Rompelímites</strong>. Durante más de una década he dedicado mi vida a explorar la intersección entre el desarrollo personal, la espiritualidad y la fe cristiana.
+      </p>
+      
+      <p class="author-bio">
+        Mi misión es ayudarte a <em>romper los límites que te impones</em> y descubrir tu verdadero potencial. A través de mis libros, comparto herramientas prácticas, reflexiones profundas y guía espiritual basada en años de investigación y experiencia personal.
+      </p>
+      
+      <div class="author-highlights">
+        <div class="highlight">
+          <div class="highlight-icon">📚</div>
+          <p><strong>12+ libros</strong> publicados en desarrollo personal y espiritualidad</p>
+        </div>
+        <div class="highlight">
+          <div class="highlight-icon">👥</div>
+          <p><strong>50,000+ lectores</strong> que han transformado sus vidas</p>
+        </div>
+        <div class="highlight">
+          <div class="highlight-icon">🎯</div>
+          <p><strong>Método probado</strong> basado en psicología, filosofía y fe</p>
+        </div>
+      </div>
+      
+      <p class="author-message">
+        Cada libro ha sido cuidadosamente elaborado para ofrecerte <strong>herramientas prácticas que puedas aplicar hoy</strong>. No encontrarás teoría abstracta, sino pasos concretos hacia la transformación.
+      </p>
+      
+      <div class="author-cta">
+        <a href="#catalogo" class="cta-button">Ver mis libros</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CATALOG SECTION ===== -->
+<section class="catalog-v2" id="catalogo">
+  <div class="catalog-header-v2">
+    <h2>Biblioteca de Transformación</h2>
+    <p>Explora nuestros libros digitales. Lee las primeras 5 páginas sin compromiso.</p>
+    
+    <form class="search-bar" id="search-form">
+      <input type="text" id="search-input" placeholder="Buscar libro, autor o tema..." />
+      <button type="submit">⌕</button>
+    </form>
+  </div>
+  
+  <div class="books-grid-v2" id="books-grid"></div>
+</section>
+
+<!-- ===== VALUES SECTION ===== -->
+<section class="values-section">
+  <h2>Por qué Rompelímites</h2>
+  
+  <div class="values-grid">
+    <div class="value-card">
+      <div class="value-icon">✨</div>
+      <h3>Contenido Auténtico</h3>
+      <p>No encontrarás promesas falsas ni teoría abstracta. Cada página está diseñada para transformación real.</p>
+    </div>
+    
+    <div class="value-card">
+      <div class="value-icon">🔄</div>
+      <h3>Método Integral</h3>
+      <p>Combinamos desarrollo personal, psicología moderna y sabiduría espiritual en un enfoque único.</p>
+    </div>
+    
+    <div class="value-card">
+      <div class="value-icon">📖</div>
+      <h3>Acceso Inmediato</h3>
+      <p>Compra hoy, lee hoy. Sin suscripciones, sin complicaciones. El libro es tuyo para siempre.</p>
+    </div>
+    
+    <div class="value-card">
+      <div class="value-icon">💬</div>
+      <h3>Comunidad</h3>
+      <p>Únete a miles de lectores que están transformando sus vidas. Comparte tu viaje con nosotros.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOG SECTION ===== -->
+<section class="blog-section" id="blog">
+  <div class="blog-header">
+    <h2>Blog & Recursos</h2>
+    <p>Artículos, reflexiones y recursos gratuitos para tu crecimiento</p>
+  </div>
+  
+  <div class="blog-grid">
+    <article class="blog-card">
+      <div class="blog-meta">
+        <span class="blog-date">29 julio, 2026</span>
+        <span class="blog-category">Espiritualidad</span>
+      </div>
+      <h3>Las 5 leyes de la manifestación bíblica</h3>
+      <p>Descubre cómo tus palabras crean tu realidad según la Biblia, y cómo aplicar este poder hoy mismo.</p>
+      <a href="#" class="blog-link">Leer artículo →</a>
+    </article>
+    
+    <article class="blog-card">
+      <div class="blog-meta">
+        <span class="blog-date">25 julio, 2026</span>
+        <span class="blog-category">Mindfulness</span>
+      </div>
+      <h3>Meditación en 5 minutos: Guía práctica</h3>
+      <p>Una técnica simple pero poderosa para entrenar tu mente en apenas 5 minutos al día.</p>
+      <a href="#" class="blog-link">Leer artículo →</a>
+    </article>
+    
+    <article class="blog-card">
+      <div class="blog-meta">
+        <span class="blog-date">22 julio, 2026</span>
+        <span class="blog-category">Desarrollo Personal</span>
+      </div>
+      <h3>Cómo rediseñar tu vida en 90 días</h3>
+      <p>Un plan paso a paso para auditar tu vida actual y crear el futuro que deseas.</p>
+      <a href="#" class="blog-link">Leer artículo →</a>
+    </article>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS SECTION ===== -->
+<section class="testimonials-v2">
+  <h2>Lo que dicen nuestros lectores</h2>
+  
+  <div class="testimonials-carousel">
+    <div class="testimonial-card-v2">
+      <div class="testimonial-header">
+        <div class="testimonial-avatar">M.G.</div>
+        <div class="testimonial-meta">
+          <p class="testimonial-name">María García</p>
+          <p class="testimonial-location">Madrid</p>
+        </div>
+      </div>
+      <div class="testimonial-rating">★★★★★</div>
+      <p class="testimonial-text">"Los libros de Rompelímites me ayudaron a replantearme mi vida y encontrar un propósito más profundo. Cada página está llena de valor."</p>
+    </div>
+    
+    <div class="testimonial-card-v2">
+      <div class="testimonial-header">
+        <div class="testimonial-avatar">C.L.</div>
+        <div class="testimonial-meta">
+          <p class="testimonial-name">Carlos López</p>
+          <p class="testimonial-location">Barcelona</p>
+        </div>
+      </div>
+      <div class="testimonial-rating">★★★★★</div>
+      <p class="testimonial-text">"Contenido de gran valor. Las enseñanzas son prácticas y transformadoras. He recomendado estos libros a todos mis amigos."</p>
+    </div>
+    
+    <div class="testimonial-card-v2">
+      <div class="testimonial-header">
+        <div class="testimonial-avatar">A.R.</div>
+        <div class="testimonial-meta">
+          <p class="testimonial-name">Ana Rodríguez</p>
+          <p class="testimonial-location">Valencia</p>
+        </div>
+      </div>
+      <div class="testimonial-rating">★★★★★</div>
+      <p class="testimonial-text">"La combinación de desarrollo personal con fe cristiana es única. Un descubrimiento valioso que ha cambiado mi perspectiva."</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NEWSLETTER SECTION ===== -->
+<section class="newsletter-section">
+  <div class="newsletter-content">
+    <h2>Recibe contenido exclusivo</h2>
+    <p>Artículos, reflexiones y ofertas especiales directamente en tu bandeja de entrada.</p>
+    
+    <form class="newsletter-form" id="newsletter-form">
+      <input type="email" placeholder="Tu email" required />
+      <button type="submit">Suscribirse</button>
+    </form>
+    
+    <p class="newsletter-note">Sin spam. Solo contenido de valor. Puedes darte de baja en cualquier momento.</p>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer-v2">
+  <div class="footer-content-v2">
+    <div class="footer-section-v2">
+      <h4>Rompelímites</h4>
+      <p>Libros de transformación personal y crecimiento espiritual para tu mejor vida.</p>
+      <div class="social-links">
+        <a href="#" title="Instagram">📱</a>
+        <a href="#" title="YouTube">📺</a>
+        <a href="#" title="Email">✉️</a>
+      </div>
+    </div>
+    
+    <div class="footer-section-v2">
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#autor">El Autor</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-section-v2">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Términos de servicio</a></li>
+        <li><a href="#">Política de privacidad</a></li>
+        <li><a href="#">Política de reembolsos</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>© 2026 Rompelímites. Todos los derechos reservados. | Hecho con ❤️</p>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="book-modal">
+  <div class="modal-content">
+    <button class="modal-close" id="modal-close">✕</button>
+    <div class="modal-inner">
+      <div class="modal-preview">
+        <div class="preview-pages" id="preview-pages"></div>
+      </div>
+      <div class="modal-info">
+        <h2 id="modal-title"></h2>
+        <p id="modal-author"></p>
+        <p class="modal-description" id="modal-description"></p>
+        <div class="modal-price">
+          <span class="price" id="modal-price">€0.00</span>
+        </div>
+        <button class="btn btn-primary" id="add-to-cart-btn">Comprar ahora</button>
+        <p class="modal-note">📖 Lee las primeras 5 páginas antes de comprar</p>
+      </div>
+    </div>
+  </div>
+</modal>
+
+<script src="assets/js/app-v2.js?v=20260730"></script>
+</body>
+</html>
