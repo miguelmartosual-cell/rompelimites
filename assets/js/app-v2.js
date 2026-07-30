@@ -4,13 +4,13 @@ const booksData = [
     id: 1,
     title: "Hábito Atómico Rompelímites",
     author: "Rompelímites",
-    description: "La guía definitiva para construir hábitos que transforman tu vida. Basado en la metodología atómica aplicada al desarrollo personal cristiano.",
+    description: "Pequeñas disciplinas espirituales que producen una gran transformación. Construye hábitos que cambian tu vida desde la raíz.",
     price: 4.99,
     genre: "Autoayuda",
     rating: 4.9,
     pages: 220,
     reviews: 542,
-    preview: "Introducción: El poder del cambio | Capítulo 1: Hábitos atómicos | Capítulo 2: Construcción diaria | Capítulo 3: Transformación | Capítulo 4: Sostén"
+    preview: "Introducción: El poder del cambio | Capítulo 1: Hábitos atómicos | Capítulo 2: Disciplinas espirituales | Capítulo 3: Transformación | Capítulo 4: Sostenimiento"
   },
   {
     id: 2,
@@ -38,27 +38,27 @@ const booksData = [
   },
   {
     id: 4,
-    title: "El Código Espiritual",
+    title: "El Código del Espíritu",
     author: "Rompelímites",
-    description: "Descodifica los principios espirituales que rigen tu vida. Leyes invisibles que cambian tu destino cuando las comprendes y aplicas.",
+    description: "Lo que la energía no puede sanar, pero Dios sí. Descodifica los principios espirituales que transforman tu vida.",
     price: 4.99,
     genre: "Espiritualidad",
     rating: 4.9,
     pages: 189,
     reviews: 534,
-    preview: "Prólogo: Las leyes ocultas | Código 1: Vibración | Código 2: Atracción | Código 3: Manifestación | Código 4: Integración"
+    preview: "Prólogo: El poder espiritual | Código 1: Fe | Código 2: Poder | Código 3: Transformación | Código 4: Integración"
   },
   {
     id: 5,
-    title: "Campo Interior",
+    title: "El Campo Interior",
     author: "Rompelímites",
-    description: "El viaje hacia tu mundo interior. Descubre los territorios inexplorados de tu ser y transforma desde adentro hacia afuera.",
+    description: "11 leyes espirituales y personales para una cosecha de vida plena. Transforma tu interior, y tu vida dará fruto.",
     price: 4.99,
-    genre: "Autoayuda",
+    genre: "Desarrollo Personal",
     rating: 4.8,
     pages: 176,
     reviews: 387,
-    preview: "Bienvenida al campo | Capítulo 1: Autoconocimiento | Capítulo 2: Sombras y luces | Capítulo 3: Reconciliación | Capítulo 4: Integración"
+    preview: "Introducción al campo | Ley 1: Siembra | Ley 2: Riego | Ley 3: Crecimiento | Ley 4-11: Cosecha de vida plena"
   },
   {
     id: 6,
@@ -74,75 +74,75 @@ const booksData = [
   },
   {
     id: 7,
-    title: "Según la Esencia",
+    title: "Volver a lo Esencial",
     author: "Rompelímites",
-    description: "Vive de acuerdo a tu esencia más profunda. Despójate de las máscaras y sé auténtico en cada aspecto de tu vida.",
-    price: 3.99,
-    genre: "Desarrollo Personal",
+    description: "Lecciones del Principito para un mundo acelerado. Descubre la sabiduría oculta en este clásico reinterpretado.",
+    price: 4.99,
+    genre: "Literatura",
     rating: 4.7,
     pages: 147,
     reviews: 298,
-    preview: "¿Quién eres realmente? | Capítulo 1: Descubrimiento | Capítulo 2: Autenticidad | Capítulo 3: Expresión | Capítulo 4: Libertad"
+    preview: "Prólogo moderno | Lección 1: Lo esencial | Lección 2: La rosa | Lección 3: El viaje | Lección 4: La amistad"
   },
   {
     id: 8,
-    title: "La Magia de Sí Mismo",
+    title: "La Magia de Ser Tú Mismo",
     author: "Rompelímites",
-    description: "Despierta el poder mágico que habita en ti. Una jornada de automagia para convertirte en el protagonista de tu propia historia.",
+    description: "Despierta a tu verdadera naturaleza. Libérate del ego religioso para vivir la libertad que Cristo ofrece.",
     price: 4.99,
     genre: "Autoayuda",
     rating: 4.8,
     pages: 184,
     reviews: 445,
-    preview: "Tu magia existe | Capítulo 1: Despertar | Capítulo 2: Poderes dormidos | Capítulo 3: Encantamientos | Capítulo 4: Reencuentro"
+    preview: "Tu verdadera naturaleza | Capítulo 1: Despertar | Capítulo 2: Identificar máscaras | Capítulo 3: Autenticidad | Capítulo 4: Libertad"
   },
   {
     id: 9,
     title: "Sal Fuera",
     author: "Rompelímites",
-    description: "Rompe los límites de tu zona de confort. Una invitación radical a vivir la vida que siempre quisiste.",
-    price: 3.99,
+    description: "El llamado que despierta tu Propósito. Rompe las cadenas de la prisión interior y vive con libertad verdadera.",
+    price: 4.99,
     genre: "Motivación",
     rating: 4.9,
     pages: 168,
     reviews: 521,
-    preview: "Más allá del miedo | Capítulo 1: Límites ilusorios | Capítulo 2: El primer paso | Capítulo 3: Valentía | Capítulo 4: Libertad"
+    preview: "Tu llamado | Capítulo 1: Despierta | Capítulo 2: Rompe cadenas | Capítulo 3: Tu propósito | Capítulo 4: Libertad"
   },
   {
     id: 10,
-    title: "50 Reflexiones para tu Alma",
+    title: "50 Verdades que Despertarán tu Alma",
     author: "Rompelímites",
-    description: "50 meditaciones profundas para alimentar tu espíritu. Reflexiones diarias que transforman tu perspectiva de la vida.",
+    description: "50 verdades del cielo para un corazón que busca propósito. Frases transformadoras que alimentan tu espíritu.",
     price: 3.99,
     genre: "Espiritualidad",
     rating: 4.8,
     pages: 156,
     reviews: 389,
-    preview: "Reflexión 1-10: Despertar | Reflexión 11-25: Transformación | Reflexión 26-40: Sabiduría | Reflexión 41-50: Integración"
+    preview: "Verdad 1-10: Despertar | Verdad 11-25: Transformación | Verdad 26-40: Sabiduría | Verdad 41-50: Integración"
   },
   {
     id: 11,
-    title: "El Circuito de tu Destino",
+    title: "El Código de la Abundancia",
     author: "Rompelímites",
-    description: "Comprende el circuito energético que define tu destino. Una guía para reconectar con tu propósito original.",
+    description: "Un estudio bíblico sobre conciencia, creencias y prosperidad verdadera. Basado en Jeremías 17:7-8 para una vida de bendición.",
     price: 4.99,
     genre: "Espiritualidad",
     rating: 4.8,
     pages: 195,
     reviews: 467,
-    preview: "Tu circuito personal | Capítulo 1: Frecuencia | Capítulo 2: Resonancia | Capítulo 3: Sincronía | Capítulo 4: Destino"
+    preview: "Introducción a la abundancia | Clave 1: Conciencia | Clave 2: Creencia | Clave 3: Prosperidad | Clave 4: Testimonio"
   },
   {
     id: 12,
-    title: "Crea tu Futuro",
+    title: "Sana lo que Nadie Vio",
     author: "Rompelímites",
-    description: "Tú eres el creador de tu futuro. Una guía práctica para diseñar y construir la vida extraordinaria que mereces.",
+    description: "Cómo Dios restaura las heridas que cargas en silencio. Un camino bíblico para sanar el rechazo, abandono y heridas del pasado.",
     price: 4.99,
-    genre: "Autoayuda",
+    genre: "Sanidad Interior",
     rating: 4.9,
     pages: 212,
     reviews: 598,
-    preview: "Eres el arquitecto | Capítulo 1: Visión | Capítulo 2: Diseño | Capítulo 3: Construcción | Capítulo 4: Celebración"
+    preview: "Reconociendo las heridas | Capítulo 1: Rechazo | Capítulo 2: Abandono | Capítulo 3: Sanidad | Capítulo 4: Libertad"
   }
 ];
 
@@ -169,8 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function renderBooks(books) {
   booksGrid.innerHTML = books.map(book => `
     <div class="book-card-v2" data-id="${book.id}">
-      <div class="book-cover-v2" style="background: linear-gradient(135deg, ${getGradient(book.id)});">
-        ${book.title}
+      <div class="book-cover-v2" style="background-image: url('assets/img/portadas/${String(book.id).padStart(2, '0')}-${slugifyTitle(book.title)}.jpg'); background-size: cover; background-position: center;">
       </div>
       <div class="book-info-v2">
         <span class="book-genre-v2">${book.genre}</span>
@@ -190,23 +189,23 @@ function renderBooks(books) {
   `).join('');
 }
 
-// Gradientes para portadas
-function getGradient(id) {
-  const gradients = [
-    '#b85c3a, #8b6f47',
-    '#8b6f47, #4a5d3a',
-    '#4a5d3a, #6b6b6b',
-    '#b85c3a, #6b6b6b',
-    '#8b6f47, #6b6b6b',
-    '#4a5d3a, #8b6f47',
-    '#b85c3a, #4a5d3a',
-    '#6b6b6b, #8b6f47',
-    '#4a5d3a, #b85c3a',
-    '#8b6f47, #b85c3a',
-    '#6b6b6b, #4a5d3a',
-    '#b85c3a, #4a5d3a'
-  ];
-  return gradients[id - 1] || gradients[0];
+// Convertir títulos a slug para nombres de archivo
+function slugifyTitle(title) {
+  const slugMap = {
+    'Hábito Atómico Rompelímites': 'habitos-atomicos',
+    'El Futuro que Dios Ya Escribió': 'futuro-dios',
+    'Empiece Bien su Día': 'empiece-bien-dia',
+    'El Código del Espíritu': 'codigo-espiritual',
+    'El Campo Interior': 'campo-interior',
+    'Código de la Manifestación': 'manifestacion',
+    'Volver a lo Esencial': 'segun-esencia',
+    'La Magia de Ser Tú Mismo': 'magia-si-mismo',
+    'Sal Fuera': 'sal-fuera',
+    '50 Verdades que Despertarán tu Alma': '50-reflexiones',
+    'El Código de la Abundancia': 'codigo-abundancia',
+    'Sana lo que Nadie Vio': 'sana-lo-que-nadie-vio'
+  };
+  return slugMap[title] || title.toLowerCase().replace(/\s+/g, '-');
 }
 
 // Abrir preview
