@@ -151,6 +151,8 @@ let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 // DOM Elements
 const booksGrid = document.getElementById('books-grid');
+const booksCarousel = document.getElementById('books-carousel');
+const carouselIndicators = document.getElementById('carousel-indicators');
 const searchInput = document.getElementById('search-input');
 const modal = document.getElementById('book-modal');
 const modalClose = document.getElementById('modal-close');
@@ -165,9 +167,9 @@ document.addEventListener('DOMContentLoaded', () => {
   setupScrollAnimations();
 });
 
-// Renderizar libros
-function renderBooks(books) {
-  booksGrid.innerHTML = books.map(book => `
+// Crear tarjeta de libro
+function createBookCard(book) {
+  return `
     <div class="book-card-v2" data-id="${book.id}">
       <div class="book-cover-v2" style="background-image: url('assets/img/portadas/${String(book.id).padStart(2, '0')}-${slugifyTitle(book.title)}.jpg'); background-size: cover; background-position: center;">
       </div>
@@ -186,7 +188,85 @@ function renderBooks(books) {
         </div>
       </div>
     </div>
-  `).join('');
+  `;
+}
+
+// Renderizar libros en grid (desktop)
+function renderBooks(books) {
+  booksGrid.innerHTML = books.map(book => createBookCard(book)).join('');
+  
+  // También renderizar en carrusel móvil
+  renderCarousel(books);
+}
+
+// Renderizar carrusel móvil
+function renderCarousel(books) {
+  if (booksCarousel) {
+    booksCarousel.innerHTML = books.map(book => `
+      <div class="books-carousel-item">
+        ${createBookCard(book)}
+      </div>
+    `).join('');
+    
+    // Crear indicadores
+    updateCarouselIndicators(books.length);
+    
+    // Pequeño delay para asegurar que el DOM está listo
+    setTimeout(() => {
+      setupCarouselObserver(booksCarousel, books.length);
+    }, 50);
+  }
+}
+
+// Crear indicadores de página
+function updateCarouselIndicators(count) {
+  if (carouselIndicators) {
+    carouselIndicators.innerHTML = Array(Math.ceil(count / 2))
+      .fill(0)
+      .map((_, i) => `
+        <button class="carousel-dot ${i === 0 ? 'active' : ''}" data-page="${i}" onclick="goToCarouselPage(${i})"></button>
+      `).join('');
+  }
+}
+
+// Ir a página específica del carrusel
+function goToCarouselPage(pageIndex) {
+  if (booksCarousel) {
+    const itemWidth = booksCarousel.querySelector('.books-carousel-item').offsetWidth;
+    const gap = 16; // gap de 1rem
+    booksCarousel.scrollLeft = pageIndex * (itemWidth + gap);
+    updateCarouselIndicators(booksData.length);
+  }
+}
+
+// Observar scroll del carrusel para actualizar indicadores
+function setupCarouselObserver(carousel, totalBooks) {
+  if (!carousel) return;
+  
+  let scrollTimeout;
+  
+  carousel.addEventListener('scroll', () => {
+    clearTimeout(scrollTimeout);
+    
+    scrollTimeout = setTimeout(() => {
+      const item = carousel.querySelector('.books-carousel-item');
+      if (!item) return;
+      
+      const itemWidth = item.offsetWidth;
+      const gap = parseInt(getComputedStyle(carousel).gap) || 24;
+      const totalScroll = itemWidth + gap;
+      const currentPage = Math.round(carousel.scrollLeft / totalScroll);
+      
+      document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentPage);
+      });
+    }, 100);
+  }, { passive: true });
+  
+  // Actualizar indicador inicial
+  setTimeout(() => {
+    document.querySelectorAll('.carousel-dot')[0]?.classList.add('active');
+  }, 100);
 }
 
 // Convertir títulos a slug para nombres de archivo
@@ -286,7 +366,13 @@ searchInput.addEventListener('input', (e) => {
     book.genre.toLowerCase().includes(query) ||
     book.description.toLowerCase().includes(query)
   );
-  renderBooks(filtered.length > 0 ? filtered : booksData);
+  const booksToShow = filtered.length > 0 ? filtered : booksData;
+  renderBooks(booksToShow);
+  
+  // Volver al inicio del carrusel
+  if (booksCarousel) {
+    booksCarousel.scrollLeft = 0;
+  }
 });
 
 // Newsletter
